@@ -1,0 +1,63 @@
+{% include "g_header.html" %}
+
+<div id="signin_form">
+    <h1>Sign Up</h1>
+
+    <form method="POST" action="#">
+        <!-- CSRF security -->
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.fname.label }}<br>
+            {{ form.fname(size=32, placeholder='John') }}<br>
+            {% for error in form.fname.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.lname.label }}<br>
+            {{ form.lname(size=32, placeholder='Smith') }}<br>
+            {% for error in form.lname.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32, placeholder='jsmith') }}<br>
+            {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32, placeholder='example@gmail.com') }}<br>
+            {% for error in form.email.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.password2.label }}<br>
+            {{ form.password2(size=32) }}<br>
+            {% for error in form.password2.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.submit() }}
+        </p>
+
+    </form>
+    <p>Already have an account? <a href="{{ url_for('signin') }}"><br>
+        <span class="emphasize-link">Click here to Login!</span></a>
+    </p>
+</div>
+{% include "g_footer.html" %}

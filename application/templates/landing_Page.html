@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+        <main>
+            <!--<a class="button" href="/signin">Google Login</a>-->
+
+            <section>
+                <header id="g-header">Online Courses</header>
+                <article>
+                    <a href="https://www.sabimoni.org.ng/" target="_blank">
+                        <img src="{{url_for('static', filename='cbn_img.jpg')}}" alt="CBN logo">
+                        <header class="article-heading">Finance</header>
+                        <p class="article-title">
+                            The Financial Literacy Course
+                        </p>
+                        <p class="article-author">By Central Bank of Nigeria</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="https://www.youtube.com/watch?v=Vl0H-qTclOg" target="_blank">
+                        <img src="{{url_for('static', filename='fcc_excel.jpg')}}" alt="Excel tutorial image">
+                        <header class="article-heading">MS Excel</header>
+                        <p class="article-title">
+                                Microsoft Excel Full Course
+                        </p>
+                        <p class="article-author">By freeCodeCamp</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design" target="_blank">
+                        <img src="{{url_for('static', filename='fcc_ResponsiveWeb.jpg')}}" alt="Responsive Web image">
+                        <header class="article-heading">HTML/CSS</header>
+                        <p class="article-title">
+                            Responsive Web Design Course
+                        </p>
+                        <p class="article-author">By freeCodeCamp</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="https://reg.smetoolkit.ng/betransformed?refer=FCRZa4" target="_blank">
+                    <img src="{{url_for('static', filename='MF_TNY_img.jpg')}}" alt="Responsive Web image">
+                    <header class="article-heading">Enterpreneurship</header>
+                    <p class="article-title">
+                        Transforming Nigerian Youths Programme
+                    </p>
+                    <p class="article-author">By MasterCard Foundation</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="{{url_for('autocad_training')}}" target="_blank">
+                    <img src="{{url_for('static', filename='autocad pic1.png')}}" alt="Responsive Web image">
+                    <header class="article-heading">AutoCad Training</header>
+                    <p class="article-title">
+                        Learn AEC Autocad Drawings at your pace!
+                    </p>
+                    <p class="article-author">By uddes</p>
+                    </a>
+                </article>
+                <article>
+                    <img src="" alt="">
+                    <header class="article-heading">MS Word</header>
+                    <p class="article-title">Meet my plug world!</p>
+                    <p class="article-author">By Ubong David</p>
+                </article>
+            </section>
+        </main>

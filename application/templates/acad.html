@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Autocad Training{% endblock %}
+{% block css %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static', filename='acad_styles.css') }}" />
+{% endblock %}
+
+{% block body %}
+{{ super() }}
+<main>
+    <h1>Autocad Software Training</h1>
+    <p>Training Notes</p>
+    <hr>
+    <br>
+
+    <section>
+        <header><h2>Wednesday, 23rd August, 2023</h2></header>
+        <p><h3>Lesson: List of Pages in a Drawing File</h3></p>
+
+        <article>
+            <header><h4>Architectural Drawings:</h4></header>
+            <ul>
+                <li>Cover Page</li>
+                <li>Site Plan</li>
+                <li>Roof Plan</li>
+                <li>Floor Plans: For all floors</li>
+                <li>Elevations: Front, Rear, Left and Right Elevations</li>
+                <li>Sections: X-X, Y-Y</li>
+                <li>Schedules: Door and Window (required), Finishes (optional)</li>
+                <li>Mechanical Details</li>
+                <li>3D Models</li>
+            </ul>
+        </article>
+
+        <article>
+            <header><h4>Structural Drawings:</h4></header>
+            <ul>
+                <li>Cover Page</li>
+                <li>Notes: General and Structural</li>
+                <li>Foundation Layout and Section</li>
+                <li>Footing Details and Sections</li>
+                <li>Column Details and Sections</li>
+                <li>First floor General Arrangement Drawing</li>
+                <li>First floor Beam Details and Sections</li>
+                <li>First floor Slab Details and Section</li>
+                <li>Staircase Details and Sections</li>
+                <li>Roof Beam Details and Sections</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <header><h2>Friday, 25th August, 2023</h2></header>
+            <p><h3>Lesson: Organizing Drawings</h3></p>
+
+            <p>
+                Layers:
+                When drawings are organized into layers,
+                the following object properties can be managed easily:
+                Visibility in drawing environment, colors, line weights
+                Print visibility and so on.
+                Model and Layouts:
+                It is usually convenient to prepare
+                title panels in layout views and the rest of the drawing in
+                the model view.
+                Automatic Organizations:
+                When highlighting lots of objects in the drawing area,
+                the autocad software automatically
+                arranges them in object groups such as polylines, text,
+                mtext, aligned dimensions, rotated dimensions, etc.
+            </p>
+
+        </article>
+    </section>
+
+</main>
+
+{% endblock %}

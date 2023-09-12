@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Computer Training" />
+    <title>Computer Training</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css') }}" />
+
+
+    <script>
+       function openTab(tabName) {
+          var i;
+          var x = document.getElementsByClassName("article");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(tabName).style.display = "block";
+}
+
+    </script>
+
+  </head>
+
+  <body>
+    <header>
+      <img id="logo" src="">
+      <h1>Computer Training</h1>
+      <!--<nav>
+        <ul>
+            <li><a href="#student-info">Courses</a></li>
+            <li><a href="#html-questions">Tutorials</a></li>
+            <li><a href="/computertraining">Jobs</a></li>
+            <li><a href="/computertraining">Practice</a></li>
+            <li><a href="/computertraining">Contents</a></li>
+            <li><a href="/computertraining">Jobs</a></li>
+            <li><a href="/computertraining">Jobs</a></li>
+
+        </ul>
+      </nav>-->
+    </header>
+    <main>
+        <section class="content">
+            <div class="interests">
+                <p>Ppt-Examples</p>
+                <p>Ppt-Slides</p>
+                <p>Ppt-Ms Word</p>
+                <p>Ppt-Online</p>
+                <p>Ppt-Handouts</p>
+                <p>Ppt Themes</p>
+            </div>
+            <article>
+                <div article_intro>
+                    <h2 class="article_heading">Microsoft Powerpoint | Start using PowerPoint </h2>
+                    <div class="article_metrics">
+                        <p class="author"><i>UDU</i>Ubong DUmoette</p>
+
+                        <div class="metrics_n_socials">
+                            <i>Thumbs_up</i>
+                            <i>Save_article</i>
+                            <i>Improve_article</i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="article_nav">
+                    <button class="1"  onclick="openTab('Read')">Read</button>
+                    <button class="2"  onclick="openTab('Discuss')">Discuss</button>
+                    <button class="3"  onclick="openTab('Courses')">Courses</button>
+                    <button class="4"  onclick="openTab('Practice')">Practice</button>
+                    <button class="5"  onclick="openTab('Video')">Video</button>
+                </div>
+
+                <div class="article OtherTabArticles" id="Video">
+
+                    <iframe width="40%" height="30%" src="https://www.youtube.com/embed/DKJDgEMgHCE" title="Test Video"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                    picture-in-picture; web-share" allowfullscreen></iframe>
+
+                </div>
+
+<div class="article OtherTabArticles" id="Read">
+
+    <p>
+
+        Let's create a PowerPoint presentation.
+
+        This is what you see when you first open PowerPoint 2013.
+
+        You can open an existing presentation over here, or create a new one from a template.
+
+        Since this is our first time, let's start with a Blank Presentation.
+
+        This area over here is the slide pane, where you choose the slide you want to work on.
+
+        And this is where you work on it.
+
+        By default, PowerPoint adds a blank title slide when you first start.
+
+        This area, up here, is called the ribbon, which contains the tools for creating your slides and slide show.
+
+        Where do we start? Well, how about here, where it says, "Click to add title".
+
+        PowerPoint uses placeholders like this to suggest what to do.
+
+        That is it. The first slide is finished.
+
+        Now to add the next slide, we'll come up here to the ribbon.
+
+        These buttons at the top are called tabs.
+
+        When you click a tab, you see the commands and options that are associated with that tab.
+
+        And on the HOME tab, there's a group of commands related to slides, including New Slide.
+
+        This time, PowerPoint adds a slide with a different layout of placeholders.
+
+        Type your slide title at the top. Then, type a list of the things you want to talk about.
+
+        PowerPoint automatically formats the text as bullets.
+
+        Before we add more slides, let's move down to the status bar, and click this button to open the NOTES pane.
+
+        Here you can add notes to use during your presentation.
+
+        If you need more room, hold the mouse over the border, until you see a double-headed arrow. Then, drag the border up.
+
+        It's usually considered a best practice to keep the amount of text on your slide to a minimum, and fill in all the details with your talk.
+
+        Don't worry. The audience can't see the notes. These are just for your reference.
+
+        We'll get into the ways to use PowerPoint during your presentation later.
+
+        Up next, let's save the presentation file and move on.
+
+    </p>
+
+
+</div>
+
+                <div class="article " id="Discuss">
+
+                    Please <a href="/login">Login to comment...</a>
+
+                    {% for comment in comments %}
+                        <div class="row">
+                            {{ comment }}
+                        </div>
+                    {% endfor %}
+
+                    <div>
+                        <form action="/computertraining" method="POST">
+                            <textarea name="contents" placeholder="Enter a comment"></textarea>
+                            <input type="submit" value="Post comment">
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="article OtherTabArticles" id="Practice">
+                    <p>Quiz</p>
+                    <form action="#">
+                        <p class="question">What are Master Slides in powerpoint?</p>
+                        <div class="answers">
+                            <label><input type="radio"> That software</label>
+                            </label><input type="radio"> Ms Software</label>
+                            </label><input type="radio"> All of the above</label>
+                        </div>
+
+                        <p class="info_paragraph">Click the button below to check your answer.</p>
+
+
+                        <button>Check you answer</button>
+                    </form>
+                </div>
+
+
+                </div>
+
+                <div class= "article OtherTabArticles">
+
+
+
+
+                </div>
+
+
+                <div class="horizontal_rule"></div>
+
+
+            </article>
+        </section>
+
+
+
+
+
+    </main>
+    <footer>
+      <address>
+        <a href="uddes.pythonanywhere.com/">uddes Design Center</a><br />
+        129 Oron Road Uyo<br />
+        Akwa Ibom State<br />
+        Nigeria
+      </address>
+    </footer>
+
+  </body>
+</html>
